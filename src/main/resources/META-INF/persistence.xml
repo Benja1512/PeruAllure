@@ -1,0 +1,21 @@
+<persistence xmlns="http://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://jakarta.ee/xml/ns/persistence
+                                 http://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
+
+    <persistence-unit name="miUnidadDePersistencia">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.PeruAllure.PeruAllure.tienda.Model.Administrador</class>
+        <!-- Añade otras entidades aquí -->
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/miBaseDeDatos"/>
+            <property name="jakarta.persistence.jdbc.user" value="usuario"/>
+            <property name="jakarta.persistence.jdbc.password" value="contraseña"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Opcional, para generar/actualizar el esquema -->
+            <property name="hibernate.show_sql" value="true"/> <!-- Opcional, para ver las consultas SQL en la consola -->
+        </properties>
+    </persistence-unit>
+</persistence>
