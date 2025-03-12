@@ -11,7 +11,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.PeruAllure</groupId>
+	<groupId>com.peruallure</groupId>
 	<artifactId>peruallure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PeruAllure</name>
@@ -107,6 +107,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.peruallure.peruallure.PeruAllureApplication</mainClass>
+				</configuration>
 			</plugin>
 
 			<!-- Maven Compiler Plugin -->
